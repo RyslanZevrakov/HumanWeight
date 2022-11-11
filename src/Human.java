@@ -1,46 +1,82 @@
+import java.util.Scanner;
 public class Human {
    public String name;
    public String surname;
    private double weight;
-   private double height=randomHeight();
-   public static double randomHeight() {
-   double randomHeight =(int)(Math.random()*(190-100))+100;
+   private double height;
 
-   return randomHeight; }
-    public double getWeight(){
-        return weight;
-    }
-    public double getHeight(){
-        return height;
-    }
+
     Human(){
-        weight=75;
-        height= randomHeight();
+        double  weight;
+        double  height;
     }
     public void goodShapeMen(){
-
-        weight=185-height;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Введите имя");
+        name = sc.next();
+        System.out.println("Введите фамилию");
+        surname = sc.next();
+        System.out.println("Введите рост");
+        height = sc.nextInt();
+        weight=height-110;
         if (weight>75){
-            System.out.println("Человек переидает ");
+            System.out.println(surname);
+            System.out.println(name);
+            System.out.println("Ты переидает ");
+            System.out.println("Рост" + height);
+            System.out.println("Вес" + weight);
+            System.out.println("Ешь меньше");
         }
         else if (weight==75){
-            System.out.println("Человек в хорошей форме");
+            System.out.println(surname);
+            System.out.println(name);
+            System.out.println("Ты в хорошей форме");
+            System.out.println("Рост" + height);
+            System.out.println("Вес" + weight);
+            System.out.println("не изменяй диету");
         }
         else  {
-            System.out.println("Человек недаедает");
+            System.out.println(surname);
+            System.out.println(name);
+            System.out.println("Ты недаедает");
+            System.out.println("Рост" + height);
+            System.out.println("Вес" + weight);
+            System.out.println("Ешь больше");
         }
 
     }
     public void goodShapeWomen() {
-        weight=165-height;
-        if (weight>75){
-            System.out.println("Человек переидает ");
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Введите имя");
+        name = sc.next();
+        System.out.println("Введите фамилию");
+        surname = sc.next();
+        System.out.println("Введите рост");
+        height = sc.nextInt();
+        weight=height-100;
+        if (weight>65){
+            System.out.println(surname);
+            System.out.println(name);
+            System.out.println("Ты переидает ");
+            System.out.println("Рост" + height);
+            System.out.println("Вес" + weight);
+            System.out.println("Ешь меньше");
         }
-        else if (weight==75){
-            System.out.println("Человек в хорошей форме");
+        else if (weight==65){
+            System.out.println(surname);
+            System.out.println(name);
+            System.out.println("Ты в хорошей форме");
+            System.out.println("Рост" + height);
+            System.out.println("Вес" + weight);
+            System.out.println("не изменяй диету");
         }
         else  {
-            System.out.println("Человек недаедает");
+            System.out.println(surname);
+            System.out.println(name);
+            System.out.println("Ты недаедает");
+            System.out.println("Рост" + height);
+            System.out.println("Вес" + weight);
+            System.out.println("Ешь больше");
         }
     }
 
